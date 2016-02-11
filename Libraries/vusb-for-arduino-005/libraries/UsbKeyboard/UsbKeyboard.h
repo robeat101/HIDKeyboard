@@ -128,8 +128,8 @@ PROGMEM char usbHidReportDescriptor[35] = { /* USB report descriptor */
 class UsbKeyboardDevice {
  public:
   UsbKeyboardDevice () {
-    PORTD = 0; // TODO: Only for USB pins?
-    DDRD |= ~USBMASK;
+    PORTB = 0; // TODO: Only for USB pins?
+    DDRB |= ~USBMASK;
 
     cli();
     usbDeviceDisconnect();
